@@ -1,0 +1,28 @@
+{
+  "blogs": [
+    {
+      "title": "My first sample",
+      "body": "Please Work",
+      "author": "super",
+      "id": "1"
+    },
+    {
+      "title": "My second sample",
+      "body": "Please Work",
+      "author": "mario",
+      "id": "2"
+    },
+    {
+      "id": "1189",
+      "title": "12321",
+      "body": "123213",
+      "type": "news"
+    },
+    {
+      "id": "632f",
+      "title": "12321321",
+      "body": "12321312",
+      "type": "news"
+    }
+  ]
+}
