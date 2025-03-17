@@ -4,13 +4,14 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom";
 const Create = () => {
     const[title, setTitle] = useState('');
     const[body, setBody] = useState('');
+    const[author, setAuthor] = useState('');
     const[type, setType] = useState(' ');
     const[isPending, setIsPending] = useState(false);
     const history = useHistory();
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        const blog = {title, body, type};
+        const blog = {title, body, author, type};
 
         setIsPending(true);
 
@@ -43,6 +44,13 @@ const Create = () => {
                 value={body}
                 onChange={(e) => setBody(e.target.value)}   
                 ></textarea>
+                <label>Author</label>
+                <input
+                type="text"
+                required
+                value={author}
+                onChange={(e) => setAuthor(e.target.value)}   
+                ></input>
                 <label>Type:</label>
                 <select
                 value={type}
@@ -54,9 +62,6 @@ const Create = () => {
                 </select>
                 { !isPending && <button>Add Info</button> }
                 { isPending && <button disabled>Adding blog...</button> }
-                <p>{title}</p>
-                <p>{body}</p>
-                <p>{type}</p>
             </form>
         </div>
      );
